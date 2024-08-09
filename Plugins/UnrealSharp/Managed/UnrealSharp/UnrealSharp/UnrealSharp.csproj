@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <Nullable>enable</Nullable>
+        <OutputPath>../../../Binaries/Managed</OutputPath>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	    <NoWarn>$(NoWarn);1570;0649;0169;0108;0109;CS1587;CS1591</NoWarn>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="..\UnrealSharp.SourceGenerators\UnrealSharp.SourceGenerators.csproj">
+            <OutputItemType>Analyzer</OutputItemType>
+			<ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+        </ProjectReference>
+
+        <ProjectReference Include="..\UnrealSharp.ExtensionSourceGenerators\UnrealSharp.ExtensionSourceGenerators.csproj">
+            <OutputItemType>Analyzer</OutputItemType>
+            <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+        </ProjectReference>
+    </ItemGroup>
+    
+</Project>
